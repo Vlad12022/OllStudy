@@ -3,7 +3,7 @@ package Interface;
 public class Main {
     public static void main(String[] args) {
 
-        Car car = new Car("Vlad", 7150, "Volkswagen", 12233443, "Golf");
+        Car car = new Car(7150, "Vlad", "Volkswagen", 12233443, "Golf");
         car.yourBrand();
         car.model1();
         car.getRegistrationNumber();
@@ -42,7 +42,7 @@ public class Main {
 
         System.out.println();
 
-        Bicycle bicycle = new Bicycle("Anton", "Stork", "113—321, 1989", 123432545);
+        Bicycle bicycle = new Bicycle("Anton", "Stork", "113—321, 1989");
         bicycle.yourBrand();
         bicycle.model1();
         bicycle.motivePower();
