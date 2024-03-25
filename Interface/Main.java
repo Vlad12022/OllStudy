@@ -16,7 +16,7 @@ public class Main {
 
         System.out.println();
 
-        Bike bike = new Bike(1274, "Gleb", "Yamaha", 1232131, " BOLT R-SPEC, 2024 ");
+        Bike bike = new Bike(1274, "Gleb", "Yamaha", 12321334, " BOLT R-SPEC, 2024 ");
         bike.yourBrand();
         bike.model1();
         bike.getRegistrationNumber();
@@ -29,7 +29,7 @@ public class Main {
 
         System.out.println();
 
-        Quadbike quadbike = new Quadbike(2520, "Vitaly", "Honda", 12323, "Talon 1000X");
+        Quadbike quadbike = new Quadbike(2520, "Vitaly", "Honda", 1232334, "Talon 1000X");
         quadbike.yourBrand();
         quadbike.model1();
         quadbike.getRegistrationNumber();
