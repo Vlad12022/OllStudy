@@ -29,7 +29,7 @@ public class Main {
 
         System.out.println();
 
-        Quadbike quadbike = new Quadbike(2520, "Vitaly", "Honda", 1232334, "Talon 1000X");
+        Quadbike quadbike = new Quadbike(2520, "Vitaly", "Honda", 1232334565, "Talon 1000X");
         quadbike.yourBrand();
         quadbike.model1();
         quadbike.getRegistrationNumber();
@@ -42,7 +42,7 @@ public class Main {
 
         System.out.println();
 
-        Bicycle bicycle = new Bicycle("Anton", "Stork", "113—321, 1989", 123432);
+        Bicycle bicycle = new Bicycle("Anton", "Stork", "113—321, 1989", 123432545);
         bicycle.yourBrand();
         bicycle.model1();
         bicycle.motivePower();
@@ -51,7 +51,7 @@ public class Main {
 
         System.out.println();
 
-        Scooter scooter = new Scooter("Vasya", "JiLong ", "Kugoo S1");
+        Scooter scooter = new Scooter("Vasya", "JiLong ", "Kugoo S3");
         scooter.yourBrand();
         scooter.model1();
         scooter.motivePower();
