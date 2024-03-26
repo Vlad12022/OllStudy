@@ -3,7 +3,7 @@ package Interface;
 public class Main {
     public static void main(String[] args) {
 
-        Car car = new Car("Vlad", 7150, "Volkswagen", 12233443, "Golf");
+        Car car = new Car(7150, "Vlad", "Volkswagen", 12233443, "Golf");
         car.yourBrand();
         car.model1();
         car.getRegistrationNumber();
@@ -29,7 +29,7 @@ public class Main {
 
         System.out.println();
 
-        Quadbike quadbike = new Quadbike(2520, "Vitaly", "Honda", 1232334, "Talon 1000X");
+        Quadbike quadbike = new Quadbike(2520, "Vitaly", "Honda", 1232334565, "Talon 1000X");
         quadbike.yourBrand();
         quadbike.model1();
         quadbike.getRegistrationNumber();
@@ -42,7 +42,7 @@ public class Main {
 
         System.out.println();
 
-        Bicycle bicycle = new Bicycle("Anton", "Stork", "113—321, 1989", 123432);
+        Bicycle bicycle = new Bicycle("Anton", "Stork", "113—321, 1989");
         bicycle.yourBrand();
         bicycle.model1();
         bicycle.motivePower();
@@ -51,7 +51,7 @@ public class Main {
 
         System.out.println();
 
-        Scooter scooter = new Scooter("Vasya", "JiLong ", "Kugoo S1");
+        Scooter scooter = new Scooter("Vasya", "JiLong ", "Kugoo S3");
         scooter.yourBrand();
         scooter.model1();
         scooter.motivePower();
