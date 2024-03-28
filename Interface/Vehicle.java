@@ -1,13 +1,13 @@
 package Interface;
 
-public abstract class MotorVehicle {
+public abstract class Vehicle implements MotivePower,Maintenance,Refuel,Registrable,Repair,TechnicalInspection,VehicleIdentity,VinNumber {
     protected int registNumber;
     protected String owner;
     protected String brand;
     protected int vin;
     protected String model;
 
-    public MotorVehicle(int registNumber, String owner, String brand, int vin, String model) {
+    public Vehicle(int registNumber, String owner, String brand, int vin, String model) {
         this.registNumber = registNumber;
         this.owner = owner;
         this.brand = brand;

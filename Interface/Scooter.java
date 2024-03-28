@@ -1,6 +1,6 @@
 package Interface;
 
-public class Scooter extends HumanPoweredVehicle implements MotivePower, VehicleIdentity, Repair, Maintenance {
+public class Scooter extends HumanPoweredVehicle  {
     public Scooter(String owner, String brand, String model) {
         super(owner, brand, model);
     }
@@ -21,10 +21,6 @@ public class Scooter extends HumanPoweredVehicle implements MotivePower, Vehicle
     }
 
 
-    @Override
-    public void repair1(Boolean rep) {
-        Repair.super.repair1(rep);
-    }
 
     @Override
     public void maintenance() {

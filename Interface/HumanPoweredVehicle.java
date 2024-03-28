@@ -1,6 +1,6 @@
 package Interface;
 
-public abstract class HumanPoweredVehicle {
+public abstract class HumanPoweredVehicle implements MotivePower, VehicleIdentity,Maintenance,Repair {
     protected String owner;
     protected String brand;
     protected String model;

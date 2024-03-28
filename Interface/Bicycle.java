@@ -10,16 +10,9 @@ public class Bicycle extends HumanPoweredVehicle implements Maintenance, MotiveP
     public void maintenance() {
         System.out.println("The service includes: Lubrication of the chain, replacement of bearings, checking of the stars and their replacement");
     }
-
     @Override
     public void motivePower() {
         System.out.println(" Type of driving force : Human muscular strength");
-    }
-
-
-    @Override
-    public void repair1(Boolean rep) {
-        Repair.super.repair1(rep);
     }
 
     @Override
