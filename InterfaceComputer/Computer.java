@@ -81,10 +81,12 @@ public class Computer implements NewComponents {
     }
 
     public int getPrice() {
+
         return price;
     }
 
     public void setPrice(int price) {
+
         this.price = price;
     }
 
@@ -98,12 +100,17 @@ public class Computer implements NewComponents {
 
     @Override
     public void addSsd(String ssd) {
-        System.out.println("Добавлено новое комплектующие " + ssd);
+        System.out.println("Добавлено новое комплектующие " + ssd + " (SSD) ");
     }
 
     @Override
     public void addWaterCooling(String waterCooling) {
         System.out.println("Добавлено охлаждение для процессора " + waterCooling);
+    }
+
+    @Override
+    public String toString() {
+        return "Computer{" + "modelMonitor='" + modelMonitor + '\'' + ", cpu='" + cpu + '\'' + ", gpu='" + gpu + '\'' + ", ram=" + ram + ", powerUnit='" + powerUnit + '\'' + ", motherboard='" + motherboard + '\'' + ", screenResolution='" + screenResolution + '\'' + ", price=" + price + " Dollars " + '}';
     }
 }
 
