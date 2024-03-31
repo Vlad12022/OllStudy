@@ -1,6 +1,5 @@
 package InterfaceComputer;
 
-import java.awt.*;
 
 public class Computer implements NewComponents {
 
@@ -8,15 +7,37 @@ public class Computer implements NewComponents {
     private String cpu;
     private String gpu;
     private int ram;
+    private String powerUnit;
+    private String motherboard;
     private String screenResolution;
     private int price;
-    public Computer(String modelMonitor, String cpu, String gpu, int ram, String screenResolution, int price) {
+
+    public Computer(String modelMonitor, String cpu, String gpu, int ram, String powerUnit, String motherboard, String screenResolution, int price) {
         this.modelMonitor = modelMonitor;
         this.cpu = cpu;
         this.gpu = gpu;
         this.ram = ram;
+        this.powerUnit = powerUnit;
+        this.motherboard = motherboard;
         this.screenResolution = screenResolution;
         this.price = price;
+
+    }
+
+    public String getPowerUnit() {
+        return powerUnit;
+    }
+
+    public void setPowerUnit(String powerUnit) {
+        this.powerUnit = powerUnit;
+    }
+
+    public String getMotherboard() {
+        return motherboard;
+    }
+
+    public void setMotherboard(String motherboard) {
+        this.motherboard = motherboard;
     }
 
     public String getModelMonitor() {
@@ -67,13 +88,22 @@ public class Computer implements NewComponents {
         this.price = price;
     }
 
-    public void newCpu(String cpu) {
+    public void addCpu(String cpu) {
         System.out.println("Старый процессор  " + getCpu() + " заменен на " + cpu);
     }
-    public void changingResolution(String resolution){
+
+    public void changingResolution(String resolution) {
         System.out.println("Изменено разрешение экрана с " + getScreenResolution() + " на " + resolution);
     }
 
+    @Override
+    public void addSsd(String ssd) {
+        System.out.println("Добавлено новое комплектующие " + ssd);
+    }
 
-        }
+    @Override
+    public void addWaterCooling(String waterCooling) {
+        System.out.println("Добавлено охлаждение для процессора " + waterCooling);
+    }
+}
 
