@@ -91,21 +91,21 @@ public class Computer implements NewComponents {
     }
 
     public void addCpu(String cpu) {
-        System.out.println("Старый процессор  " + getCpu() + " заменен на " + cpu);
+        System.out.println(" Old cpu  " + getCpu() + " replaced with a new one  " + cpu);
     }
 
     public void changingResolution(String resolution) {
-        System.out.println("Изменено разрешение экрана с " + getScreenResolution() + " на " + resolution);
+        System.out.println(" Changed the screen resolution from " + getScreenResolution() + " on " + resolution);
     }
 
     @Override
     public void addSsd(String ssd) {
-        System.out.println("Добавлено новое комплектующие " + ssd + " (SSD) ");
+        System.out.println(" Added new accessories " + ssd + " (SSD) ");
     }
 
     @Override
     public void addWaterCooling(String waterCooling) {
-        System.out.println("Добавлено охлаждение для процессора " + waterCooling);
+        System.out.println(" Added cooling for the cpu " + waterCooling);
     }
 
     @Override

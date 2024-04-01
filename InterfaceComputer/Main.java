@@ -14,16 +14,24 @@ public class Main {
 
         System.out.println();
 
-        Phone phone = new Phone("¿ÈÙÓÌ","xr","Ios",100,"white", LocalDate.of(2018,6,12));
+        Phone phone = new Phone("Iphone", "xr", "Ios", 100, "white", LocalDate.of(2018, 6, 12));
         System.out.println(phone.toString());
-        phone.screenBroke(true);
         phone.iosVersion(true);
+        phone.setHasNFC(true);
+        phone.displayNfcStatus();
+        phone.setHasWirelessCharging(true);
+        phone.displayWirelessCharging();
+        phone.screenBroke(true);
 
         System.out.println();
 
-        Pad pad = new Pad("Samsung","Galaxy","Indroid",500,"Black",LocalDate.of(2021,5,12));
+        Pad pad = new Pad("Samsung", "Galaxy", "Indroid", 500, "Black", LocalDate.of(2021, 5, 12));
         System.out.println(pad.toString());
         pad.setBatteryHealth(false);
+        pad.setHasNFC(false);
+        pad.displayNfcStatus();
+        pad.setHasWirelessCharging(false);
+        pad.displayWirelessCharging();
     }
 
 
