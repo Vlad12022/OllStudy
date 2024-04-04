@@ -7,9 +7,6 @@ public abstract class TechnologicalDevice {
     private RAM ram;
     private int price;
 
-    public TechnologicalDevice() {
-    }
-
     public TechnologicalDevice(CPU cpu, GPU gpu, RAM ram, int price) {
         this.cpu = cpu;
         this.gpu = gpu;

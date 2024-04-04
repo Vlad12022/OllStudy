@@ -8,7 +8,6 @@ public class Phone extends PortableDevice {
 
     public Phone(CPU cpu, GPU gpu, RAM ram, int price, String screenResolution, String model, String operatingSystem, String color, LocalDate releaseDate) {
         super(cpu, gpu, ram, price, screenResolution, model, operatingSystem, color, releaseDate);
-
     }
 
     public void iosVersion(Boolean releasedIos) {
@@ -43,6 +42,11 @@ public class Phone extends PortableDevice {
         } else {
             System.out.println("Does not support wireless charging");
         }
+    }
+
+    @Override
+    public String toString() {
+        return " Iphone " + super.toString();
     }
 }
 

@@ -9,9 +9,7 @@ public class Pad extends PortableDevice {
         super(cpu, gpu, ram, price, screenResolution, model, operatingSystem, color, releaseDate);
 
     }
-    public Pad() {
 
-    }
     public void setBatteryHealth(Boolean batteryHealth) {
         if (batteryHealth) {
             System.out.println("The battery is fully functional");
@@ -36,5 +34,11 @@ public class Pad extends PortableDevice {
         } else {
             System.out.println("Does not support wireless charging");
         }
+    }
+
+    @Override
+    public String toString() {
+        return " Pad " + super.toString();
+
     }
 }

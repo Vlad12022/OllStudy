@@ -1,8 +1,8 @@
 package InterfaceComputer;
 
 public class CPU {
- private String model;
- private int numberCores;
+    private String model;
+    private int numberCores;
 
     public CPU(String model, int numberCores) {
         this.model = model;
@@ -25,5 +25,11 @@ public class CPU {
         this.numberCores = numberCores;
     }
 
-
+    @Override
+    public String toString() {
+        return "CPU{" +
+                "model='" + model + '\'' +
+                ", numberCores=" + numberCores +
+                '}';
+    }
 }

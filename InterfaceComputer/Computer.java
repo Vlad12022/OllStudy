@@ -2,9 +2,11 @@ package InterfaceComputer;
 
 public class Computer extends TechnologicalDevice implements NewComponents {
 
-    public Computer(CPU cpu, GPU gpu, RAM ram, int price) {
+    public Computer(CPU cpu, GPU gpu, RAM ram, int price, Motherboard motherboard) {
         super(cpu, gpu, ram, price);
+        this.motherboard = motherboard;
     }
+
     private Motherboard motherboard;
 
     public Motherboard getMotherboard() {
@@ -17,17 +19,17 @@ public class Computer extends TechnologicalDevice implements NewComponents {
 
     @Override
     public void addSsd(String ssd) {
-        System.out.println("Добавлен новый компонент : " + ssd);
+        System.out.println(" add new component : " + ssd);
     }
 
     @Override
     public void addWaterCooling(String waterCooling) {
-        System.out.println("Добавлено охлаждение для процессора : " + waterCooling);
+        System.out.println(" Added cooling for the cpu : " + waterCooling);
     }
 
     @Override
     public String toString() {
-        return "Computer{" +
+        return super.toString() +
                 "motherboard=" + motherboard +
                 '}';
     }

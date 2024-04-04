@@ -2,15 +2,16 @@ package InterfaceComputer;
 
 public class Motherboard {
 
-    String model;
-    String cpuSocket;
-    String memoryType;
+    private String model;
+    private String cpuSocket;
+    private String memoryType;
 
     public Motherboard(String model, String cpuSocket, String memoryType) {
         this.model = model;
         this.cpuSocket = cpuSocket;
         this.memoryType = memoryType;
     }
+
     public String getModel() {
         return model;
     }
@@ -35,5 +36,12 @@ public class Motherboard {
         this.memoryType = memoryType;
     }
 
-
+    @Override
+    public String toString() {
+        return "Motherboard{" +
+                "model='" + model + '\'' +
+                ", cpuSocket='" + cpuSocket + '\'' +
+                ", memoryType='" + memoryType + '\'' +
+                '}';
+    }
 }
