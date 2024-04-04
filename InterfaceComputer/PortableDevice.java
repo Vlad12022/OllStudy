@@ -2,51 +2,35 @@ package InterfaceComputer;
 
 import java.time.LocalDate;
 
-public abstract class PortableDevice implements WirelessFeatures {
+public abstract class PortableDevice extends TechnologicalDevice implements WirelessFeatures {
+    public PortableDevice(CPU cpu, GPU gpu, RAM ram, int price, String screenResolution, String model, String operatingSystem,String color, LocalDate releaseDate) {
+        super(cpu, gpu, ram, price);
+        this.screenResolution = screenResolution;
+        this.model = model;
+        this.operatingSystem = operatingSystem;
+        this.color = color;
+        this.releaseDate = releaseDate;
 
-    private String brand;
+    }
+    private String screenResolution;
     private String model;
     private String operatingSystem;
-    private int storage;
     private String color;
     private LocalDate releaseDate;
     private boolean hasNFC;
     private boolean hasWirelessCharging;
 
-    public PortableDevice(String brand, String model, String operatingSystem, int storage, String color, LocalDate releaseDate) {
-        this.brand = brand;
-        this.model = model;
-        this.operatingSystem = operatingSystem;
-        this.storage = storage;
-        this.color = color;
-        this.releaseDate = releaseDate;
+    protected PortableDevice() {
 
     }
 
-    public boolean isHasNFC() {
-        return hasNFC;
+    public String getScreenResolution() {
+        return screenResolution;
     }
 
-    public void setHasNFC(boolean hasNFC) {
-        this.hasNFC = hasNFC;
+    public void setScreenResolution(String screenResolution) {
+        this.screenResolution = screenResolution;
     }
-
-    public boolean isHasWirelessCharging() {
-        return hasWirelessCharging;
-    }
-
-    public void setHasWirelessCharging(boolean hasWirelessCharging) {
-        this.hasWirelessCharging = hasWirelessCharging;
-    }
-
-    public String getBrand() {
-        return brand;
-    }
-
-    public void setBrand(String brand) {
-        this.brand = brand;
-    }
-
     public String getModel() {
         return model;
     }
@@ -62,15 +46,6 @@ public abstract class PortableDevice implements WirelessFeatures {
     public void setOperatingSystem(String operatingSystem) {
         this.operatingSystem = operatingSystem;
     }
-
-    public int getStorage() {
-        return storage;
-    }
-
-    public void setStorage(int storage) {
-        this.storage = storage;
-    }
-
     public String getColor() {
         return color;
     }
@@ -87,15 +62,19 @@ public abstract class PortableDevice implements WirelessFeatures {
         this.releaseDate = releaseDate;
     }
 
-    @Override
-    public String toString() {
-        return "PortableDevice{" +
-                "brand='" + brand + '\'' +
-                ", model='" + model + '\'' +
-                ", operatingSystem='" + operatingSystem + '\'' +
-                ", storage=" + storage +
-                ", color='" + color + '\'' +
-                ", releaseDate=" + releaseDate +
-                '}';
+    public boolean isHasNFC() {
+        return hasNFC;
+    }
+
+    public void setHasNFC(boolean hasNFC) {
+        this.hasNFC = hasNFC;
+    }
+
+    public boolean isHasWirelessCharging() {
+        return hasWirelessCharging;
+    }
+
+    public void setHasWirelessCharging(boolean hasWirelessCharging) {
+        this.hasWirelessCharging = hasWirelessCharging;
     }
 }

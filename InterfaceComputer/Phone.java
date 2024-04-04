@@ -6,8 +6,9 @@ public class Phone extends PortableDevice {
     private Boolean screenBroken;
     private Boolean releasedIos;
 
-    public Phone(String brand, String model, String operatingSystem, int storage, String color, LocalDate releaseDate) {
-        super(brand, model, operatingSystem, storage, color, releaseDate);
+    public Phone(CPU cpu, GPU gpu, RAM ram, int price, String screenResolution, String model, String operatingSystem, String color, LocalDate releaseDate) {
+        super(cpu, gpu, ram, price, screenResolution, model, operatingSystem, color, releaseDate);
+
     }
 
     public void iosVersion(Boolean releasedIos) {

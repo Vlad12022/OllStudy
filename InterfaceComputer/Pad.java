@@ -5,10 +5,13 @@ import java.time.LocalDate;
 public class Pad extends PortableDevice {
     private boolean batteryHealth;
 
-    public Pad(String brand, String model, String operatingSystem, int storage, String color, LocalDate releaseDate) {
-        super(brand, model, operatingSystem, storage, color, releaseDate);
-    }
+    public Pad(CPU cpu, GPU gpu, RAM ram, int price, String screenResolution, String model, String operatingSystem, String color, LocalDate releaseDate) {
+        super(cpu, gpu, ram, price, screenResolution, model, operatingSystem, color, releaseDate);
 
+    }
+    public Pad() {
+
+    }
     public void setBatteryHealth(Boolean batteryHealth) {
         if (batteryHealth) {
             System.out.println("The battery is fully functional");

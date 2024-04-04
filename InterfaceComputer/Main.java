@@ -4,17 +4,18 @@ import java.time.LocalDate;
 
 public class Main {
     public static void main(String[] args) {
+       RAM ram = new RAM("Kingston",16,"DDR4");
+       GPU gpu = new GPU("Nvidia",12);
+       CPU cpu = new CPU("Intel",5);
 
-        Computer computer = new Computer("Samsung", "Intel Core i5", "Nvidia 3060", 16, "DeepCool PF650 ", "Intel H5", "1920: 1080", 300);
+        Computer computer = new Computer(cpu,gpu,ram,300);
+        computer.addSsd("Toshiba 1tb");
+        computer.addWaterCooling("DeepCool");
         System.out.println(computer.toString());
-        computer.addCpu("AMD Ryzen 5 4500");
-        computer.changingResolution("1680:1050");
-        computer.addSsd("Toshiba 1 tb");
-        computer.addWaterCooling("Deep—ool LS720 ");
 
         System.out.println();
 
-        Phone phone = new Phone("Iphone", "xr", "Ios", 100, "white", LocalDate.of(2018, 6, 12));
+       Phone phone = new Phone(cpu,gpu,ram,500,"1920:1080","Iphone","Ios","White",LocalDate.of(2001,2,12));
         System.out.println(phone.toString());
         phone.iosVersion(true);
         phone.setHasNFC(true);
@@ -25,7 +26,8 @@ public class Main {
 
         System.out.println();
 
-        Pad pad = new Pad("Samsung", "Galaxy", "Indroid", 500, "Black", LocalDate.of(2021, 5, 12));
+        Pad pad = new Pad();
+
         System.out.println(pad.toString());
         pad.setBatteryHealth(false);
         pad.setHasNFC(false);
