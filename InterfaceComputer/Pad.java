@@ -37,8 +37,15 @@ public class Pad extends PortableDevice {
     }
 
     @Override
+    public void resolutChange(String resolution) {
+        System.out.println(" Changed the resolution from " + getScreenResolution() + " on " + resolution);
+    }
+
+    @Override
     public String toString() {
         return " Pad " + super.toString();
 
     }
+
+
 }

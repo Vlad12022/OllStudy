@@ -6,7 +6,7 @@ public class Main {
     public static void main(String[] args) {
         RAM ram = new RAM("Kingston", 16, "DDR4");
         GPU gpu = new GPU("Nvidia", 12);
-        CPU cpu = new CPU("Intel", 5);
+        CPU cpu = new CPU("Intel H10MK", 5);
         Motherboard motherboard = new Motherboard("Amd", "120", "DDR4");
 
 
@@ -15,12 +15,13 @@ public class Main {
         System.out.println(computer.toString());
         computer.addSsd("Toshiba 1tb");
         computer.addWaterCooling("DeepCool");
+        computer.cpuReplacing(" Ryzen m5 ");
 
         System.out.println();
 
         RAM phoneRAM = new RAM(3);
         GPU phoneGPU = new GPU("Apple GPU");
-        CPU phoneCPU = new CPU("Apple A12 Bionic",6);
+        CPU phoneCPU = new CPU("Apple A12 Bionic", 6);
 
         Phone phone = new Phone(phoneCPU, phoneGPU, phoneRAM, 500, " 828 : 1792", "Iphone", "Ios", "White", LocalDate.of(2001, 2, 12));
 
@@ -32,14 +33,15 @@ public class Main {
         phone.setHasWirelessCharging(true);
         phone.displayWirelessCharging();
         phone.screenBroke(true);
+        phone.resolutChange(" 720: 1600 ");
 
         System.out.println();
 
         RAM padRAM = new RAM(8);
-        CPU padCPU = new CPU("Apple m2",8);
+        CPU padCPU = new CPU("Apple m2", 8);
         GPU padGPU = new GPU("Apple m5");
 
-        Pad pad = new Pad(padCPU,padGPU,padRAM,1000," 2048: 2732 ","Apple","Ios","Grey",LocalDate.of(2023,2,12));
+        Pad pad = new Pad(padCPU, padGPU, padRAM, 1000, " 2048: 2732 ", "Apple", "Ios", "Grey", LocalDate.of(2023, 2, 12));
 
         System.out.println(pad.toString());
 
@@ -48,5 +50,6 @@ public class Main {
         pad.displayNfcStatus();
         pad.setHasWirelessCharging(false);
         pad.displayWirelessCharging();
+        pad.resolutChange(" 1700 : 2600 ");
     }
 }

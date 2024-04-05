@@ -1,6 +1,6 @@
 package InterfaceComputer;
 
-public class Computer extends TechnologicalDevice implements ComponentBuilder {
+public class Computer extends TechnologicalDevice implements ComponentBuilder, ComponentUpdater {
 
     public Computer(CPU cpu, GPU gpu, RAM ram, int price, Motherboard motherboard) {
         super(cpu, gpu, ram, price);
@@ -15,6 +15,11 @@ public class Computer extends TechnologicalDevice implements ComponentBuilder {
 
     public void setMotherboard(Motherboard motherboard) {
         this.motherboard = motherboard;
+    }
+
+    @Override
+    public void cpuReplacing(String cpu) {
+        System.out.println("Процессор " + getCpu() + " заменен на " + cpu);
     }
 
     @Override
@@ -33,4 +38,6 @@ public class Computer extends TechnologicalDevice implements ComponentBuilder {
                 "motherboard=" + motherboard +
                 '}';
     }
+
+
 }
