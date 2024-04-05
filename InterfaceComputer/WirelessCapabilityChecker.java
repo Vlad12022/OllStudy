@@ -1,6 +1,6 @@
 package InterfaceComputer;
 
-public interface WirelessFeatures {
+public interface WirelessCapabilityChecker {
 
     void displayNfcStatus();
 

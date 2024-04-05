@@ -1,7 +1,7 @@
 package InterfaceComputer;
 
 
-public interface NewComponents {
+public interface ComponentBuilder {
     void addSsd(String ssd);
 
     void addWaterCooling(String waterCooling);

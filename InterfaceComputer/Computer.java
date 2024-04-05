@@ -1,6 +1,6 @@
 package InterfaceComputer;
 
-public class Computer extends TechnologicalDevice implements NewComponents {
+public class Computer extends TechnologicalDevice implements ComponentBuilder {
 
     public Computer(CPU cpu, GPU gpu, RAM ram, int price, Motherboard motherboard) {
         super(cpu, gpu, ram, price);
