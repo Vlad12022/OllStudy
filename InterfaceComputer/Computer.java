@@ -2,13 +2,14 @@ package InterfaceComputer;
 
 public class Computer extends TechnologicalDevice implements ComponentBuilder, ComponentUpdater {
 
-    public Computer(CPU cpu, GPU gpu, RAM ram, int price, Motherboard motherboard) {
+    public Computer(CPU cpu, GPU gpu, RAM ram, int price, Motherboard motherboard,SSD ssd) {
         super(cpu, gpu, ram, price);
         this.motherboard = motherboard;
+        this.ssd = ssd;
     }
 
     private Motherboard motherboard;
-
+    private SSD ssd;
     public Motherboard getMotherboard() {
         return motherboard;
     }
@@ -24,7 +25,7 @@ public class Computer extends TechnologicalDevice implements ComponentBuilder, C
 
     @Override
     public void addSsd(String ssd) {
-        System.out.println(" add new component : " + ssd);
+        System.out.println("В компьютер добавлено новое ссд  : " + ssd);
     }
 
     @Override
@@ -36,7 +37,7 @@ public class Computer extends TechnologicalDevice implements ComponentBuilder, C
     public String toString() {
         return super.toString() +
                 "motherboard=" + motherboard +
-                '}';
+                  " ssd " + ssd + '}';
     }
 
 

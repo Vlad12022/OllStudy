@@ -8,12 +8,12 @@ public class Main {
         GPU gpu = new GPU("Nvidia", 12);
         CPU cpu = new CPU("Intel H10MK", 5);
         Motherboard motherboard = new Motherboard("Amd", "120", "DDR4");
+        SSD ssd = new SSD("Toshiba", 1000);
 
-
-        Computer computer = new Computer(cpu, gpu, ram, 300, motherboard);
+        Computer computer = new Computer(cpu, gpu, ram, 300, motherboard,ssd);
 
         System.out.println(computer.toString());
-        computer.addSsd("Toshiba 1tb");
+        computer.addSsd("Samsung 1 tb");
         computer.addWaterCooling("DeepCool");
         computer.cpuReplacing(" Ryzen m5 ");
 
