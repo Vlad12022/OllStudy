@@ -39,20 +39,20 @@ public class Computer extends TechnologicalDevice implements ComponentBuilder, C
     public void cpuReplacing(CPU cpu) {
         CPU oldCpu = this.getCpu();
         this.setCpu(cpu);
-        System.out.println("Процессор " + oldCpu.getModel() + " заменен на " + cpu);
+        System.out.println(" Cpu " + oldCpu.getModel() + " replaced by " + cpu);
     }
 
     @Override
     public void addSsd(SSD ssd) {
         SSD oldSSD = this.getSsd();
         this.setSsd(ssd);
-        System.out.println("Старый ссд " + oldSSD.getModel() + " заменен на " + ssd);
+        System.out.println(" old ssd " + oldSSD.getModel() + " replaced by " + ssd);
 
     }
 
     @Override
     public void addWaterCooling(WaterCooling waterCooling) {
-        System.out.println("В компьютер добавлено жидскотное охлаждение " + waterCooling);
+        System.out.println(" Water cooling has been added to the computer " + waterCooling);
     }
 
     @Override
