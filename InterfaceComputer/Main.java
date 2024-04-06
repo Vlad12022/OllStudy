@@ -10,12 +10,12 @@ public class Main {
         Motherboard motherboard = new Motherboard("Amd", "120", "DDR4");
         SSD ssd = new SSD("Toshiba", 1000);
 
-        Computer computer = new Computer(cpu, gpu, ram, 300, motherboard,ssd);
+        Computer computer = new Computer(cpu, gpu, ram, 300, motherboard, ssd);
 
         System.out.println(computer.toString());
-        computer.addSsd("Samsung 1 tb");
-        computer.addWaterCooling("DeepCool");
-        computer.cpuReplacing(" Ryzen m5 ");
+        computer.addSsd(new SSD("Samsung", 1));
+        computer.addWaterCooling(new WaterCooling("DeepCool",3));
+        computer.cpuReplacing(new CPU("AssRock 10", 5));
 
         System.out.println();
 

@@ -38,10 +38,6 @@ public class Motherboard {
 
     @Override
     public String toString() {
-        return "Motherboard{" +
-                "model='" + model + '\'' +
-                ", cpuSocket='" + cpuSocket + '\'' +
-                ", memoryType='" + memoryType + '\'' +
-                '}';
+        return "Motherboard{" + "model='" + model + '\'' + ", cpuSocket='" + cpuSocket + '\'' + ", memoryType='" + memoryType + '\'' + '}';
     }
 }

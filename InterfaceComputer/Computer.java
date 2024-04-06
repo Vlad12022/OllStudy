@@ -1,15 +1,32 @@
 package InterfaceComputer;
 
 public class Computer extends TechnologicalDevice implements ComponentBuilder, ComponentUpdater {
+    private Motherboard motherboard;
+    private SSD ssd;
+    private WaterCooling waterCooling;
 
-    public Computer(CPU cpu, GPU gpu, RAM ram, int price, Motherboard motherboard,SSD ssd) {
+    public Computer(CPU cpu, GPU gpu, RAM ram, int price, Motherboard motherboard, SSD ssd) {
         super(cpu, gpu, ram, price);
         this.motherboard = motherboard;
         this.ssd = ssd;
     }
 
-    private Motherboard motherboard;
-    private SSD ssd;
+    public WaterCooling getWaterCooling() {
+        return waterCooling;
+    }
+
+    public void setWaterCooling(WaterCooling waterCooling) {
+        this.waterCooling = waterCooling;
+    }
+
+    public SSD getSsd() {
+        return ssd;
+    }
+
+    public void setSsd(SSD ssd) {
+        this.ssd = ssd;
+    }
+
     public Motherboard getMotherboard() {
         return motherboard;
     }
@@ -19,25 +36,28 @@ public class Computer extends TechnologicalDevice implements ComponentBuilder, C
     }
 
     @Override
-    public void cpuReplacing(String cpu) {
-        System.out.println("Процессор " + getCpu() + " заменен на " + cpu);
+    public void cpuReplacing(CPU cpu) {
+        CPU oldCpu = this.getCpu();
+        this.setCpu(cpu);
+        System.out.println("Процессор " + oldCpu.getModel() + " заменен на " + cpu);
     }
 
     @Override
-    public void addSsd(String ssd) {
-        System.out.println("В компьютер добавлено новое ссд  : " + ssd);
+    public void addSsd(SSD ssd) {
+        SSD oldSSD = this.getSsd();
+        this.setSsd(ssd);
+        System.out.println("Старый ссд " + oldSSD.getModel() + " заменен на " + ssd);
+
     }
 
     @Override
-    public void addWaterCooling(String waterCooling) {
-        System.out.println(" Added cooling for the cpu : " + waterCooling);
+    public void addWaterCooling(WaterCooling waterCooling) {
+        System.out.println("В компьютер добавлено жидскотное охлаждение " + waterCooling);
     }
 
     @Override
     public String toString() {
-        return super.toString() +
-                "motherboard=" + motherboard +
-                  " ssd " + ssd + '}';
+        return super.toString() + "motherboard=" + motherboard + " ssd " + ssd + '}';
     }
 
 

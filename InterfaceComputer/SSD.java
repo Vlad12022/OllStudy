@@ -2,8 +2,8 @@ package InterfaceComputer;
 
 public class SSD {
 
- private String model;
- private int memorySize;
+    private String model;
+    private int memorySize;
 
     public SSD(String model, int memorySize) {
         this.model = model;

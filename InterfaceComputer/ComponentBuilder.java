@@ -2,8 +2,8 @@ package InterfaceComputer;
 
 
 public interface ComponentBuilder {
-    void addSsd(String ssd);
+    void addSsd(SSD ssd);
 
-    void addWaterCooling(String waterCooling);
+    void addWaterCooling(WaterCooling waterCooling);
 
 }

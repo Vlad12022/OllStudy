@@ -48,12 +48,7 @@ public abstract class TechnologicalDevice {
 
     @Override
     public String toString() {
-        return "TechnologicalDevice{" +
-                "cpu=" + cpu +
-                ", gpu=" + gpu +
-                ", ram=" + ram +
-                ", price=" + price +
-                '}';
+        return "TechnologicalDevice{" + "cpu=" + cpu + ", gpu=" + gpu + ", ram=" + ram + ", price=" + price + '}';
     }
 }
 

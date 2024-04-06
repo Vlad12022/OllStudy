@@ -3,6 +3,14 @@ package InterfaceComputer;
 import java.time.LocalDate;
 
 public abstract class PortableDevice extends TechnologicalDevice implements WirelessCapabilityChecker, ScreenResolutionChanger {
+    private String screenResolution;
+    private String model;
+    private String operatingSystem;
+    private String color;
+    private LocalDate releaseDate;
+    private boolean hasNFC;
+    private boolean hasWirelessCharging;
+
     public PortableDevice(CPU cpu, GPU gpu, RAM ram, int price, String screenResolution, String model, String operatingSystem, String color, LocalDate releaseDate) {
         super(cpu, gpu, ram, price);
         this.screenResolution = screenResolution;
@@ -11,14 +19,6 @@ public abstract class PortableDevice extends TechnologicalDevice implements Wire
         this.color = color;
         this.releaseDate = releaseDate;
     }
-
-    private String screenResolution;
-    private String model;
-    private String operatingSystem;
-    private String color;
-    private LocalDate releaseDate;
-    private boolean hasNFC;
-    private boolean hasWirelessCharging;
 
     public String getScreenResolution() {
         return screenResolution;
