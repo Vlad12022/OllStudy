@@ -12,7 +12,7 @@ public class Main {
 
         Computer computer = new Computer(cpu, gpu, ram, 300, motherboard, ssd);
 
-        System.out.println(computer.toString());
+        System.out.println(computer);
         computer.addSsd(new SSD("Samsung", 1));
         computer.addWaterCooling(new WaterCooling("DeepCool",3));
         computer.cpuReplacing(new CPU("AssRock 10", 5));
@@ -25,7 +25,7 @@ public class Main {
 
         Phone phone = new Phone(phoneCPU, phoneGPU, phoneRAM, 500, " 828 : 1792", "Iphone", "Ios", "White", LocalDate.of(2001, 2, 12));
 
-        System.out.println(phone.toString());
+        System.out.println(phone);
 
         phone.iosVersion(true);
         phone.setHasNFC(true);
@@ -43,7 +43,7 @@ public class Main {
 
         Pad pad = new Pad(padCPU, padGPU, padRAM, 1000, " 2048: 2732 ", "Apple", "Ios", "Grey", LocalDate.of(2023, 2, 12));
 
-        System.out.println(pad.toString());
+        System.out.println(pad);
 
         pad.setBatteryHealth(false);
         pad.setHasNFC(false);
