@@ -24,6 +24,10 @@ public abstract class  Products {
         this.amount = amount;
     }
 
+    public Products() {
+
+    }
+
     public String getName() {
         return name;
     }
