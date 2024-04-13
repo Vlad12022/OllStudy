@@ -2,7 +2,7 @@ package InterfaceProducts;
 
 import java.time.LocalDate;
 
-public abstract class  Products {
+public abstract class Products {
 
     private String name;
     private int id;
