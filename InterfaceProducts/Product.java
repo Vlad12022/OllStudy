@@ -1,8 +1,9 @@
 package InterfaceProducts;
 
 import java.time.LocalDate;
+import java.util.Objects;
 
-public abstract class Products {
+public abstract class Product {
 
     private String name;
     private int id;
@@ -13,7 +14,7 @@ public abstract class Products {
     private LocalDate expiryDate;
     private int amount;
 
-    public Products(String name, int id, String upc, String manufacturer, int price, LocalDate manufactureDate, LocalDate expiryDate, int amount) {
+    public Product(String name, int id, String upc, String manufacturer, int price, LocalDate manufactureDate, LocalDate expiryDate, int amount) {
         this.name = name;
         this.id = id;
         this.upc = upc;
@@ -24,7 +25,7 @@ public abstract class Products {
         this.amount = amount;
     }
 
-    public Products() {
+    public Product() {
 
     }
 
@@ -104,5 +105,18 @@ public abstract class Products {
                 ", expiryDate=" + expiryDate +
                 ", amount=" + amount +
                 '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Product product = (Product) o;
+        return id == product.id && price == product.price && amount == product.amount && Objects.equals(name, product.name) && Objects.equals(upc, product.upc) && Objects.equals(manufacturer, product.manufacturer) && Objects.equals(manufactureDate, product.manufactureDate) && Objects.equals(expiryDate, product.expiryDate);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(name, id, upc, manufacturer, price, manufactureDate, expiryDate, amount);
     }
 }

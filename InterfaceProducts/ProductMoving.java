@@ -2,7 +2,7 @@ package InterfaceProducts;
 
 public interface ProductMoving {
 
-    void productMove(Products products);
+    void productMove(Product product);
 
 
 }

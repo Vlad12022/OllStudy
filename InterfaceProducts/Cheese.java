@@ -2,7 +2,7 @@ package InterfaceProducts;
 
 import java.time.LocalDate;
 
-public class Cheese extends Products {
+public class Cheese extends Product {
     private Boolean vegetarian;
 
     public Cheese(String name, int id, String upc, String manufacturer, int price, LocalDate manufactureDate, LocalDate expiryDate, int amount) {

@@ -2,7 +2,7 @@ package InterfaceProducts;
 
 public interface IDeductInventory {
 
-    void removeProduct(Products product);
+    void removeProduct(Product product);
 
 
 }

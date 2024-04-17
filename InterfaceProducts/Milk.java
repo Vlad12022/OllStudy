@@ -1,9 +1,8 @@
 package InterfaceProducts;
 
-import java.util.Scanner;
 import java.time.LocalDate;
 
-public class Milk extends Products {
+public class Milk extends Product {
     private Boolean pasteurized;
 
     public Milk(String name, int id, String upc, String manufacturer, int price, LocalDate manufactureDate, LocalDate expiryDate, int amount) {
