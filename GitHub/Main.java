@@ -11,7 +11,7 @@ public class Main {
         };
         System.out.println("Радиус вписанной окружности равен : " + radius.apply(20.0, 14.0));
 
-
+        System.out.println();
     }
 }
 

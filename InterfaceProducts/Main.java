@@ -54,7 +54,7 @@ public class Main {
         shop.buyProduct(milk);
         shop.buyProduct(cheese);
         shop.printByProduct();
-
+        System.out.println();
 
     }
 
