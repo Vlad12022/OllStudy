@@ -3,7 +3,7 @@ package InterfaceComputer;
 import java.time.LocalDate;
 
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws WaterCollingException {
         RAM ram = new RAM("Kingston", 16, "DDR4");
         GPU gpu = new GPU("Nvidia", 12);
         CPU cpu = new CPU("Intel H10MK", 5);
@@ -27,6 +27,7 @@ public class Main {
 
         System.out.println(phone);
 
+        phone.addWaterCooling();
         phone.iosVersion(true);
         phone.setHasNFC(true);
         phone.displayNfcStatus();
