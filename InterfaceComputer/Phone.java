@@ -43,6 +43,17 @@ public class Phone extends PortableDevice {
             System.out.println("Does not support wireless charging");
         }
     }
+public void addWaterCooling() throws WaterCollingException{
+        boolean isAddWaterCooling = false;
+
+        if(!isAddWaterCooling){
+            throw new WaterCollingException("Adding is not possible");
+
+        }
+
+
+}
+
 
     @Override
     public void resolutChange(String resolution) {

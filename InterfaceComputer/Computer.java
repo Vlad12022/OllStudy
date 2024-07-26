@@ -1,5 +1,5 @@
 package InterfaceComputer;
-
+//Создать свое соб исключение, которое будет сообщать не поддерживается
 public class Computer extends TechnologicalDevice implements ComponentBuilder, ComponentUpdater {
     private Motherboard motherboard;
     private SSD ssd;
